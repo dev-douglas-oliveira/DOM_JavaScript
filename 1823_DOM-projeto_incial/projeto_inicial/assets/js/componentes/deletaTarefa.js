@@ -1,0 +1,14 @@
+const BotaoDeleta = function () {
+    const botaoDeleta = document.createElement("button");
+    botaoDeleta.innerText = "deletar";
+    botaoDeleta.addEventListener("click", deletarTarefa);
+    return botaoDeleta;
+};
+
+const deletarTarefa = function (evento) {
+    const botaoDeleta = evento.target;
+    const tarefaCompleta = botaoDeleta.parentElement;
+    tarefaCompleta.remove();
+};
+
+export default BotaoDeleta; //exporta o botão deleta
